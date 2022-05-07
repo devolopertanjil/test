@@ -1,0 +1,1078 @@
+/* ================================================
+                Common css start
+=============================================== */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+img{
+    vertical-align: middle;
+}
+:root{
+    --hover: #e23e38;
+    --cmn-color: #222222;
+}
+.main_ovly{
+    position: relative;
+    z-index: 1;
+}
+.main_ovly::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.cmn_head{
+    color: #222;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+.cmn_head img{
+    margin-top: -18px;
+}
+/* ================================================
+                Common css end
+=============================================== */
+
+/* ================================================
+                Menu part start
+=============================================== */
+.main_menu ul li .nav-link{
+    color: #fff;
+}
+.logo_bg{
+    background-color: #313131;
+    width: 245px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    transform: skewX(-35deg);
+    -webkit-transform: skewX(-35deg);
+    -moz-transform: skewX(-35deg);
+    -ms-transform: skewX(-35deg);
+    -o-transform: skewX(-35deg);
+    position: relative;
+}
+.logo_bg img{
+    transform: skew(35deg);
+    -webkit-transform: skew(35deg);
+    -moz-transform: skew(35deg);
+    -ms-transform: skew(35deg);
+    -o-transform: skew(35deg);
+}
+.logo_bg::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 70px;
+    background-color: #030303;
+}
+.logo_bg::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 70px;
+    background-color: #030303;
+}
+.main_menu{
+    background-color: rgba(53, 53, 53, 0.25);
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 30PX;
+    width: 100%;
+    z-index: 999;
+}
+.main_menu ul li a{
+    color: #f1f1f1;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding: 0 10px;
+    line-height: 50px;
+    position: relative;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.main_menu ul li a:hover{
+    color: var(--cmn-color);
+    background-color: #fff;
+}
+.main_menu ul li a::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--hover);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.main_menu ul li a:hover::after{
+    width: 100%;
+}
+/* ================================================
+                Menu part end
+=============================================== */
+
+/* ================================================
+                Banner part start
+=============================================== */
+.banner_item{
+    padding: 254px 0 117px;
+}
+.banner_item::after{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.banner_text h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    position: relative;
+}
+.banner_text h2::before {
+	position: absolute;
+	content: '';
+	left: -1px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 164px;
+	height: 3px;
+	background-color: var(--hover);
+	clip-path: polygon(0 1%, 99% 0%, 93% 100%, 0% 100%);
+}
+.banner_text h2::after {
+	position: absolute;
+	content: '';
+	right: -3px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 109px;
+	height: 3px;
+	background-color: var(--hover);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	clip-path: polygon(0 1%, 100% 0%, 100% 100%, 8% 100%);
+}
+.banner_text h1 {
+	color: var(--hover);
+	font-size: 60px;
+	font-weight: 700;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	position: relative;
+}
+.banner_text h1::before {
+	position: absolute;
+	content: '';
+	right: -4px;
+	top: -22px;
+	width: 3px;
+	height: 202px;
+	background-color: var(--hover);
+}
+.banner_text h1::after {
+	position: absolute;
+	content: '';
+	left: -1px;
+	top: -22px;
+	width: 3px;
+	height: 200px;
+	background-color: var(--hover);
+}
+.banner_text p{
+    color: #ddd;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0 16px;
+    margin-bottom: 2px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 32px;
+    position: relative;
+}
+.banner_text p::before {
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: -70px;
+	width: 73px;
+	height: 3px;
+	background-color: var(--hover);
+}
+.banner_text p::after {
+	position: absolute;
+	content: '';
+	right: -2px;
+	bottom: -72px;
+	width: 49px;
+	height: 3px;
+	background-color: var(--hover);
+}
+.banner_text a{
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-right: 26px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.banner_text a:hover{
+    background-color: var(--hover);
+    border: 1px solid var(--hover);
+}
+#banner_part .slick-dots{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+#banner_part .slick-dots li.slick-active button{
+    width: 20px;
+    height: 20px;
+    background-color: var(--hover);
+    border: 2px solid var(--hover);
+}
+#banner_part .slick-dots li{
+    margin: 0 5px;
+}
+#banner_part .slick-dots li button {
+	font-size: 0;
+	width: 15px;
+	height: 15px;
+	background: transparent;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+#banner_part .slick-dots li button:hover{
+    background-color: var(--hover);
+    border: 2px solid var(--hover);
+}
+/* ================================================
+                Banner part end
+=============================================== */
+
+/* ================================================
+                About part end
+=============================================== */
+#about_part {
+	padding: 80px 0 0;
+}
+.about_video{
+    position: relative;
+}
+.about_video .about_ovly{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.about_video .about_ovly a{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    color: #19171c;
+    text-align: center;
+    line-height: 48px;
+    background-color: var(--hover);
+    border-radius: 50%;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.about_video .about_ovly a:hover{
+    background-color: #fff;
+}
+.about_text h2{
+    color: #222;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+.about_text p{
+    color: #444;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 12px;
+}
+.about_text p span{
+    display: inline-block;
+    margin-top: 33px;
+}
+/* ================================================
+                About part end
+=============================================== */
+
+/* ================================================
+                Gallery part start
+=============================================== */
+#gallery_part {
+	padding: 72px 0 0 0;
+}
+.gal_bg{
+    padding: 30px 0;
+}
+.gal_bg::after{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.gal_ovly a i{
+    color: #fff;
+    font-size: 30px;
+}
+.gal_img{
+    position: relative;
+}
+.gal_img:first-child{
+    margin-bottom: 30px;
+}
+.gal_ovly{
+    position: absolute;
+    content: '';
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(226, 62, 56, 0.5);
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.gal_img:hover .gal_ovly{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.gal_ovly a i{
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+/* ================================================
+                Gallery part end
+=============================================== */
+/* ================================================
+                Team part start
+=============================================== */
+#team_part{
+    padding: 72px 0 0 0;
+}
+.team_text h4 {
+	color: var(--cmn-color);
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	margin-top: 12px;
+	margin-bottom: 5px;
+}
+.team_text h5 {
+	color: #444;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Oswald', sans-serif;
+	margin-bottom: 10px;
+}
+.team_text p{
+    color: #444;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 0;
+    padding: 0 8px;
+}
+
+.team_ovly ul li a{
+    color: #fffefe;
+    font-size: 16px;
+    font-weight: 400;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fffefe;
+    transition: all linear.3s;
+    -webkit-transition: all linear.3s;
+    -moz-transition: all linear.3s;
+    -ms-transition: all linear.3s;
+    -o-transition: all linear.3s;
+}
+.team_ovly ul li a:hover{
+    color: #1da0f2;
+    background-color: #fffefe;
+    border: 1px solid #fffefe;
+}
+.team_ovly ul li:nth-child(2) a{
+    margin: 10px 0;
+}
+.team_img{
+    position: relative;
+}
+.team_ovly{
+    position: absolute;
+    content: '';
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(226, 62, 56, 0.5);
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.team_img:hover .team_ovly{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.team_ovly ul{ 
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.team_text{
+    border: 1px solid transparent;
+}
+.team_text p{
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.team_main:hover p {
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	margin-bottom: 20px;
+}
+.team_main:hover .team_text{
+    border-color: #ddd;
+}
+.team_main{
+    margin-top: 72px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.team_main:hover{
+    transform: translateY(-42px);
+    -webkit-transform: translateY(-42px);
+    -moz-transform: translateY(-42px);
+    -ms-transform: translateY(-42px);
+    -o-transform: translateY(-42px);
+}
+
+
+/* ================================================
+                Team part start
+=============================================== */
+/* ================================================
+                Testimonial part start
+=============================================== */
+#testimonial_part {
+	padding: 30px 0 0 0;
+}
+.test_bg{
+    padding: 30px 0 80px 0;
+}
+.test_bg::after{
+    background-color: rgba(3, 3, 3, 0.80);
+}
+.test_text h4{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.test_text p{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+.test_text i{
+    color: #e23e38;
+    font-size: 14px;
+}
+.text_para p{
+    color: #ddd;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 5px;
+    line-height: 18px;
+}
+.test_slider .slick-slide{
+    padding: 0 12px;
+}
+.test_slider .slick-dots {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 170px;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	width: auto;
+}
+.test_slider .slick-dots li button{
+    margin: 0 5px;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.test_slider .slick-dots li.slick-active button{
+    width: 20px;
+    height: 20px;
+    background-color: var(--hover);
+    border: 2px solid var(--hover);
+}
+
+
+/* ================================================
+                Testimonial part end
+=============================================== */
+
+/* ================================================
+                Membership part start
+=============================================== */
+#membership_part {
+	padding: 72px 0 0 0;
+}
+.member_inner h2{
+    background: url(../images/member1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 35px 0;
+    margin-top: -8px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+}
+.member_inner h2 span{
+    color: #fff;
+    font-size: 29px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+}
+.member_inner h2::after{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.member_inner h3{
+    color: #222;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding: 20px 0;
+    background-color: #ddd;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.member_inner{
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+.member_inner ul li{
+    color: #444;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.member_inner ul li:first-child{
+    margin-top: 40px;
+    margin-bottom: 27px;
+}
+.member_inner ul li:nth-child(2),
+.member_inner ul li:nth-child(3),
+.member_inner ul li:nth-child(4){
+    margin-bottom: 27px;
+}
+.member_inner ul li:last-child{
+    margin-bottom: 35px;
+}
+.member_inner a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    background-color: #ddd;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 10px 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.member_inner:hover h3{
+    color: #fff;
+    background-color: var(--hover);
+}
+.member_inner:hover a{
+    color: #fff;
+    background-color: var(--hover);
+    cursor: pointer;
+}
+/* ================================================
+                Membership part end
+=============================================== */
+
+/* ================================================
+                Counter part start
+=============================================== */
+#counter_part{
+    margin-top: 80px;
+}
+.main_ovly::after{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.count_text{
+    padding: 20px 0;
+}
+.count_text h2{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+}
+.count_text p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+}
+/* ================================================
+                Counter part end
+=============================================== */
+
+/* ================================================
+                Our classes part start
+=============================================== */
+#classes_part{
+    padding: 72px 0 0 0;
+}
+.tab_menu{
+    background-color: #f1f1f1;
+}
+.tab_menu li{
+    width: 16.66666666666%;
+    height: 50px;
+}
+.tab_menu .nav-link.active,
+.tab_menu .show > .nav-link {
+    color: #fff;
+	background-color: var(--hover);
+    width: 100%;
+    line-height: 50px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0; 
+}
+.tab_menu li button{
+    width: 100%;
+    padding: 0;
+    line-height: 50px;
+    color: #222;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.tab_menu li button:hover{
+    color: #fff;
+    background-color: var(--hover);
+}
+.tab_menu .nav-link{
+    color: #222;
+}
+.tab_body ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.tab_body ul li {
+    width: 19.65%;
+    background-color: #f1f1f1;
+    padding: 50px 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    cursor: pointer;
+}
+.tab_body ul li p{
+    color: #222;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    transition: all linear .3s;
+}
+.tab_body ul li i{
+    color: #222;
+    font-weight: 400;
+    font-size: 45px;
+    transition: all linear .3s;
+}
+.tab_body ul li p span{
+    color: #222;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.tab_body ul li:hover{
+    background-color: var(--hover);
+}
+.tab_body ul li:first-child,
+.tab_body ul li:nth-child(2),
+.tab_body ul li:nth-child(3),
+.tab_body ul li:nth-child(4),
+.tab_body ul li:nth-child(6),
+.tab_body ul li:nth-child(7),
+.tab_body ul li:nth-child(8),
+.tab_body ul li:nth-child(9){
+    margin-right: 5px;
+}
+.tab_body ul li:first-child,
+.tab_body ul li:nth-child(2),
+.tab_body ul li:nth-child(3),
+.tab_body ul li:nth-child(4),
+.tab_body ul li:nth-child(5){
+    margin-bottom: 5px;
+}
+.tab_body ul li:hover p,
+.tab_body ul li:hover i,
+.tab_body ul li:hover p span{
+    color: #fff;
+}
+/* ================================================
+                Our classes part end
+=============================================== */
+
+/* ================================================
+                Client logo part start
+=============================================== */
+#client_logo_part {
+	padding: 78px 0 0 0;
+}
+.client_slider .slick-slide{
+    padding: 0 12px;
+}
+.client_slider .slick-dots li button{
+    font-size: 0;
+}
+.prev_arr,
+.nxt_arr{
+    position: absolute;
+    font-size: 28px;
+    color: #444;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    width: auto;
+}
+.prev_arr{
+    left: -50px;
+}
+.nxt_arr{
+    right: -50px;
+}
+/* ================================================
+                Client logo part end
+=============================================== */
+
+/* ================================================
+                Footer part start
+=============================================== */
+#footer_part {
+	margin-top: 80px;
+}
+.footer_bg::after{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.footer_logo{
+    padding: 30px 0;
+    border-bottom: 1px solid #fff;
+}
+.foot_head h4{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin: 30px 0;
+
+}
+.opening_text ul li{
+    color: #fff;
+}
+.twitter_icon i{
+    color: #1da1f2;
+    font-size: 20px;
+    font-weight: 400;
+}
+.twit_txt p{
+    color: #ddd;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 2px;
+    margin-left: 15px;
+}
+.twit_txt p span {
+	display: inline-block;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 20px;
+}
+.flick_img ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flick_img ul li img{
+    margin-bottom: 10px;
+}
+.flick_img ul li{
+    margin-left: 10px;
+}
+
+.contact_txt{
+    display: flex;
+    flex-wrap: wrap;
+}
+.con_icon i{
+    color: var(--hover);
+    font-size: 15px;
+}
+.con_txt p{
+    color: #ddd;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+.con_head .foot_head{
+    margin-top: -18px;
+}
+.con_btm_icon i {
+	color: #fff;
+	font-size: 16px;
+	padding: 6px 8px;
+	border: 1px solid #fff;
+	transition: all linear .3s;
+	-webkit-transition: all linear .3s;
+	-moz-transition: all linear .3s;
+	-ms-transition: all linear .3s;
+	-o-transition: all linear .3s;
+	margin-right: 10px;
+	margin-bottom: 40px;
+	cursor: pointer;
+}
+.con_btm_icon i:hover{
+    background-color: #e23e38;
+    border: 1px solid var(--hover);
+}
+.foot_copy p {
+	color: #fff;
+	padding: 20px 0;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	border-top: 1px solid #fff;
+	margin-bottom: 20px;
+}
+.foot_copy p span{
+    color: var(--hover);
+    text-transform: uppercase;
+}
+/* ================================================
+                Footer part end
+=============================================== */
+
+/* ================================================
+                Scroll top button start
+=============================================== */
+.scroll_btn i {
+    background: var(--hover);
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	cursor: pointer;
+	transition: all linear 0.2s;
+	-webkit-transition: all linear 0.2s;
+	-moz-transition: all linear 0.2s;
+	-ms-transition: all linear 0.2s;
+	-o-transition: all linear 0.2s;
+	z-index: 999999;
+}
+.scroll_btn i:hover {
+    background-color: #313131;
+}
+/* ================================================
+                Scroll top button end
+=============================================== */
